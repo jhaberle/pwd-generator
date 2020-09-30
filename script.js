@@ -15,7 +15,7 @@ var passwordJoin = [];
 
 
 // --------------------------------------------------
-
+generateNumber();
 
 
 function generateNumber() {
@@ -57,47 +57,41 @@ function generateNumber() {
             passwordJoin.push(newUndercase);
             // console.log(newUndercase);
         } else {
-            return;
+            null;
         }
         if (upperCaseConfirm) {
             var newUppercase = upperCase[Math.floor(Math.random() * upperCase.length)];
             passwordJoin.push(newUppercase);
             // console.log(newUppercase);
         } else {
-            return;
+            null;
         }
         if (specCharConfirm) {
             var newSpecialChar = specChar[Math.floor(Math.random() * specChar.length)];
             passwordJoin.push(newSpecialChar);
             // console.log(newSpecialChar);
         } else {
-            return;
+            null;
         }
         if (numberConfirm) {
             var newNumber = number[Math.floor(Math.random() * number.length)];
             passwordJoin.push(newNumber);
             // console.log(newNumber);
         } else {
-            return;
+            null;
         }
     }
 
 
 
-  for (var i = 0; i < confirmOpen; i++) {
-    var finalPassword = passwordJoin.push(finalPassword)
-    console.log (passwordJoin);
-    document.getElementById("final-password").innerHTML = passwordJoin.join("");
-    
-    
-    
-    // passwordJoin[Math.floor(Math.random() * passwordJoin.length)];
-    // passwordJoin.push(finalPassword)
-    // console.log (passwordJoin);
-    // document.getElementById("final-password").innerHTML = passwordJoin.join(""); 
+    for (var i = 0; i < confirmOpen; i++) {
+        var finalPassword = passwordJoin.push(finalPassword)
+        console.log (passwordJoin);
+        document.getElementById("final-password").innerHTML = passwordJoin.join("");
   }
+
 }
 
     
-generateNumber();
+
 
