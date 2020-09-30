@@ -20,7 +20,7 @@ var passwordJoin = [];
 
 function generateNumber() {
     alert("Password Generator - Answer the following questions to determine specific aspects of your new password to be created.");
-    var confirmOpen = prompt("how may characters would you like your password to be (must be between 8 and 128)");
+    var confirmOpen = prompt("how may characters would you like your password to be? (must be between 8 and 128)");
     console.log(confirmOpen);
 
     if (confirmOpen < 8 || confirmOpen > 128) { 
@@ -82,15 +82,22 @@ function generateNumber() {
         }
     }
 
-console.log(finalPassword);
+
 
   for (var i = 0; i < confirmOpen; i++) {
-    var finalPassword = passwordJoin[Math.floor(Math.random() * passwordJoin.length)];
-    passwordJoin.push(finalPassword)
+    var finalPassword = passwordJoin.push(finalPassword)
     console.log (passwordJoin);
-    document.getElementById("final-password").innerHTML = passwordJoin.join(""); 
+    document.getElementById("final-password").innerHTML = passwordJoin.join("");
+    
+    
+    
+    // passwordJoin[Math.floor(Math.random() * passwordJoin.length)];
+    // passwordJoin.push(finalPassword)
+    // console.log (passwordJoin);
+    // document.getElementById("final-password").innerHTML = passwordJoin.join(""); 
   }
 }
 
     
 generateNumber();
+
